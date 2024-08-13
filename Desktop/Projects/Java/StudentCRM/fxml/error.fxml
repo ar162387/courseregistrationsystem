@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ErrorController">
+    
+    <stylesheets>
+        <URL value="@css/cssfx.css"/>
+    </stylesheets>
+
+    <Label fx:id="errorMessageLabel" text="Error Message" styleClass="errorText"/>
+    <Button fx:id="closeButton" text="Close" onAction="#closeErrorDialog"/>
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.WithdrawController" hgap="10" vgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <TableView fx:id="studentsTable" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="studentNameColumn" text="Student Name"/>
+            <TableColumn fx:id="studentEmailColumn" text="Student Email"/>
+        </columns>
+    </TableView>
+    
+    <Button text="Withdraw" fx:id="withdrawButton" GridPane.rowIndex="1" GridPane.columnIndex="0" disable="true"/>
+    <Button text="Close" fx:id="closeButton" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+</GridPane>

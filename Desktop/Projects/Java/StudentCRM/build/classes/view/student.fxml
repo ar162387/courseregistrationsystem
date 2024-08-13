@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController"
+            prefHeight="600.0" prefWidth="800.0" stylesheets="@style.css">
+
+    <top>
+        <VBox styleClass="headerBox" style="-fx-background-color: #3498db;" alignment="CENTER" spacing="10">
+            <StackPane alignment="CENTER">
+       
+            
+                <VBox spacing="5">
+                    <HBox spacing="10" alignment="CENTER">
+                        <Label text="Logged in as : Zarael Thorne" styleClass="header" textFill="white"/>
+                        <Label fx:id="studentName" styleClass="header" textFill="white"/>
+                    </HBox>
+                </VBox>
+            </StackPane>
+        </VBox>
+    </top>
+
+
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="My Sessions" styleClass="subHeader" textFill="white"/>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button text="Withdraw" fx:id="withdrawButton" onAction="#handleWithdraw" styleClass="button" disable="true"/>
+            </HBox>
+            <TableView fx:id="mySessionsTable" prefHeight="200.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn text="Session ID" fx:id="sessionIdColumn"/>
+                    <TableColumn text="Session Name" fx:id="sessionNameColumn"/>
+                    <TableColumn text="Start Time" fx:id="startTimeColumn"/>
+                    <TableColumn text="Duration" fx:id="durationColumn"/>
+                </columns>
+            </TableView>
+            <Label fx:id="notEnrolledLabel" text="Not enrolled in any sessions"  visible="false"/>
+
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="Enrol into Session" styleClass="subHeader" textFill="white"/>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button text="Enrol" fx:id="enrolButton" onAction="#handleEnrol" styleClass="button" disable="true"/>
+            </HBox>
+
+            <TableView fx:id="availableSessionsTable" prefHeight="200.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn text="Session ID" fx:id="availSessionIdColumn"/>
+                    <TableColumn text="Session Name" fx:id="availSessionNameColumn"/>
+                    <TableColumn text="Start Time" fx:id="availStartTimeColumn"/>
+                    <TableColumn text="Duration" fx:id="availDurationColumn"/>
+                    <TableColumn text="Seats Available" fx:id="availSeatsColumn"/>
+                    <TableColumn text="Enrolled" fx:id="availEnrolledColumn"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+
+
+    <bottom>
+        <VBox style="-fx-background-color: black;" alignment="CENTER" spacing="10">
+            <Button text="Logout" onAction="#handleLogout" styleClass="button"/>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController"
+          alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="200.0" prefWidth="400.0">
+
+    <stylesheets>
+        <URL value="@css/cssfx.css"/>
+    </stylesheets>
+
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    
+    <Button text="Login" onAction="#handleOk" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    
+    <Button text="Cancel" onAction="#handleCancel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    
+    <Label fx:id="errorLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" textFill="red" visible="false"/>
+</GridPane>

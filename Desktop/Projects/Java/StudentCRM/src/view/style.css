@@ -1,0 +1,38 @@
+.root { 
+  -fx-background-color: #00749b;
+}
+
+.heading {
+  -fx-font-size: 32px;
+  -fx-font-family: "Verdana";
+  -fx-text-fill: white;
+  -fx-opacity: 0.8;
+}
+
+.button {
+  -fx-pref-width: 120px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-family: "Verdana";
+  -fx-background-color: #0099cc;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+.button:hover {
+  -fx-background-color: #00bfff;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: #3498db; /* Blue */
+    -fx-border-color: #3498db; /* Border color */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #3498db; /* Blue */
+    -fx-text-fill: white; /* Text color */
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #ecf0f1; /* Light blue */
+}

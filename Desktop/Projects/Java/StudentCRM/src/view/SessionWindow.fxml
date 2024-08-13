@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.SessionsController" hgap="10" vgap="10" stylesheets="@style.css">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <!-- Labels and TextFields -->
+    <Label text="Subject:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="subjectField" promptText="Subject" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    
+    <Label text="Day:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="dayComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    
+    <Label text="Start Time:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="startField" promptText="Start Time" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    
+    <Label text="Duration:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="durationField" promptText="Duration" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    
+    <Label text="Room:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="roomField" promptText="Room" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    
+    <Label text="Capacity:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="capacityField" promptText="Capacity" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    
+    <Label text="Enrolled:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="enrolledField" promptText="Enrolled" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    
+    <!-- Buttons -->
+    <Button fx:id="addButton" text="Add" onAction="#handleAdd" GridPane.rowIndex="7" GridPane.columnIndex="0" styleClass="button"/>
+    <Button fx:id="updateButton" text="Update" onAction="#handleUpdate" GridPane.rowIndex="7" GridPane.columnIndex="1" styleClass="button" visible="false"/>
+    <Button fx:id="closeButton" text="Close" onAction="#handleClose" GridPane.rowIndex="7" GridPane.columnIndex="2" styleClass="button"/>
+</GridPane>

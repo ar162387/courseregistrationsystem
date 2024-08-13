@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+	
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController"
+          alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="200.0" prefWidth="400.0">	
+    
+    <stylesheets>
+        <URL value="@css/cssfx.css"/>
+    </stylesheets>
+
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    
+    <Button text="Login" onAction="#handleLogin" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+</GridPane>
+
